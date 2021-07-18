@@ -1,13 +1,15 @@
 from django.db import models
 
 # Create your models here.
-class leaderboard(models.Model):
+class Leaderboard(models.Model):
     name = models.CharField(max_length=100)
     score = models.CharField(max_length=100)
-    
+
 
     def __str__(self) -> str:
-        return self.title
+        return self.name + " " + self.score
+
+
 
 
 
