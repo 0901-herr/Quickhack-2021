@@ -5,6 +5,7 @@ import random
 from .models import Task
 from .models import Leaderboard
 
+
 # Create your views here.
 def index(request):
     return render(request, 'index.html')
