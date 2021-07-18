@@ -2,13 +2,42 @@ from django.db import models
 
 # Create your models here.
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Models are used to create database
 # Each class represents one database
 
-class Url(models.Model):
+class Task(models.Model):
     # two tables inside this database
-    link = models.CharField(max_length=1000)
-    uuid = models.CharField(max_length=10)
+    task_id = models.CharField(max_length=10)
+    task_title = models.CharField(max_length=1000)
+    task_des = models.CharField(max_length=1000)
 
 
 # python manage.py makemigrations
