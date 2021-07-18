@@ -35,7 +35,7 @@ html {
 #title {
     position: absolute;
     float: left;
-    top: 15%;
+    top: 12%;
     left: 6%;
     font-size: 50px;
     font-weight: medium;
@@ -46,7 +46,7 @@ html {
 #subtitle {
     position: absolute;
     float: left;
-    top: 26%;
+    top: 23%;
     left: 6%;
     font-size: 30px;
     font-weight: normal;
@@ -57,7 +57,7 @@ html {
 header img {
     position: relative;
     float: right;
-    top: 50%;
+    top: 47%;
     width: 500px;
     height: 300px;
 }
@@ -94,9 +94,9 @@ header button a {
 /** Section **/
 
 section {
-    height: 70vh;
+    height: 100vh;
     margin-top: 50px;
-    margin-bottom: 50px;
+    margin-bottom: 200px;
 }
 
 section ul {
@@ -120,7 +120,7 @@ section h1 {
 }
 
 #tasks {
-    width: 65%;
+    width: 70%;
     position: relative;
     /* left: 5%; */
     /* padding-left: 40px; */
@@ -132,7 +132,7 @@ section h1 {
 .task-item {
     /* border: 3px solid; */
     float: left;
-    width: 600px;
+    width: 800px;
     height: 120px;
     background-color: #fff;
     color: #0063B2;
@@ -163,6 +163,42 @@ section h1 {
     margin-top: 60px;
 }
 
+input[type='checkbox'] {
+    -webkit-appearance:none;
+    width:30px;
+    height:30px;
+    background:white;
+    border-radius:20px;
+    border:2px solid #0063B2;
+    margin-top: 60px;
+}
+
+input[type='checkbox']:checked {
+    background: #0063B2;
+}
+
+#more-btn {
+    position: absolute;
+    float: left;
+    /* top: 54%; */
+    /* left: 6%; */
+    margin-left: 25%;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 30px;
+    width: 200px;
+    height: 60px;
+    background-color: #0063B2;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#more-tasks {
+    margin-top: 100px;
+    display: none;
+}
 
 /*Leaderboard */
 
@@ -173,15 +209,22 @@ section h1 {
     margin-top: 5%;
 }
 
+#leaderboard p {
+    font-size: 18px;
+}
+
+#leaderboard h4 {
+    font-size: 18px;
+}
+
 #leaderboard h3 {
     width: 100%;
-    /* align-items: center; */
-    padding-left: 20%;
+    font-size: 26px;
+    padding-left: 10%;
 }
 
 .leaderboard-item {
     width: 100%;
-    /* background-color: red; */
 }
 
 .name {
@@ -190,14 +233,14 @@ section h1 {
 }
 
 .record {
+    color: gray;
     float: right;
     width: 40%;
 }
 
-
-/* Credit*/
-
-/* #credit {
-    height: 10vh;
-    margin-top: 40%;
-}   */
+/*
+#spacing {
+    position: relative; 
+    margin: 100px;
+}
+*/

@@ -30,32 +30,60 @@
             <div id="tasklist">
                 <li>
                     <div class="task-item">
-                        <h3>Be grateful for one thing happened today 🙏</h3>
-                        <p>Helping clearing out the chores</p>
+                        <h3>🙏 Be grateful to something that happened today</h3>
+                        <p>There are lots of great things happening around you, you just have to realize them.</p>
                     </div>
-                    <button class="task-btn" onclick="changeColor(this)"></button>
+                    <input id="checkbox", type="checkbox" onclick="checkMe()">
                 </li> 
 
                 <li>
                     <div class="task-item">
-                        <h3>Helping clearing out the chores</h3>
-                        <p>Helping clearing out the chores</p>
+                        <h3>🏀 Do some exercise</h3>
+                        <p>Make sure you always stay healthy while staying at home.</p>
                     </div>
-                    <button class="task-btn" onclick="changeColor(this)"></button>
+                    <input id="checkbox", type="checkbox" onclick="checkMe()">
                 </li>
 
                 <li>
                     <div class="task-item">
-                        <h3>Helping clearing out the chores</h3>
-                        <p>Helping clearing out the chores</p>
+                        <h3>📅 Plan a timetable for yourself</h3>
+                        <p>Plan your time wisely to prevent stressing out or being overwhelmed by a bunch of tasks.</p>
                     </div>
-                    <button class="task-btn" onclick="changeColor(this)"></button>
+                    <input id="checkbox", type="checkbox" onclick="checkMe()">
                 </li>
+
+                <button onclick="moreTasks()" id="more-btn">Give me more !!</button>
+
+                <div id="more-tasks">
+                    <li>
+                        <div class="task-item">
+                            <h3>🧑‍🤝‍🧑 Be grateful to three people that impacted you the most</h3>
+                            <p>Family members, friends. Think about people that are always there for you. Be thankful for them.</p>
+                        </div>
+                        <input id="checkbox", type="checkbox" onclick="checkMe()">
+                    </li>
+    
+                    <li>
+                        <div class="task-item">
+                            <h3>❤️ Help your love ones to do something</h3>
+                            <p>Lend them a hand, show your appreciation for them by action..</p>
+                        </div>
+                        <input id="checkbox", type="checkbox" onclick="checkMe()">
+                    </li>
+
+                    <li>
+                        <div class="task-item">
+                            <h3>☁️ Open up and talk about your feelings</h3>
+                            <p>It might be tough to deal with your mental health problems alone. Open up to someone and be honest about yourself. Remember that you are not alone!</p>
+                        </div>
+                        <input id="checkbox", type="checkbox" onclick="checkMe()">
+                    </li>
+                </div>
             </div>
         </div>
 
         <div id="leaderboard">
-            <h3>Leaderboard 🔥🔥</h3>
+            <h3>Leaderboard 🔥</h3>
             <ul>
                 <li>
                     <div class="leaderboard-item">
@@ -92,22 +120,49 @@
                     </div>
                 </li>
                
+                <li>
+                    <div class="leaderboard-item">
+                        <h4 class="name">You 😎</h4>
+                        <h4 id="myrecord" class="record">0  tasks</h4>
+                    </div>
+                </li>
             </ul>
         </div>
-        <!-- <div id="credits">
-        <p>Menty v1.0</p> -->
     </section>
 </body>
 </html>
 
 <script text="text/javascript">
-    document.getElementById('task-btn').onclick = changeColor;   
+    // document.getElementById('task-btn').onclick = changeColor;   
+    var score = 0
 
-    function changeColor(_this) {
-        _this.style.color = "blue";
-        _this.style.background
-        return false;
-    }   
+    function moreTasks() {
+        var moreTasks = document.getElementById("more-tasks");
+        var moreBtn = document.getElementById("more-btn")
+
+        if (moreTasks.style.display != "none") {
+            moreTasks.style.display = "inline"
+            moreBtn.style.display = "none"
+        }
+        else {
+            moreTasks.style.display = "none"
+            moreBtn.style.display = "inline"
+        }
+        console.log("HELLO")
+    }
+
+    function checkMe() {
+        const cb = document.getElementById('checkbox')
+        var line =  document.getElementById('myrecord')
+
+        if (cb.checked) {
+            score += 1
+        }
+        else {
+            score -= 1
+        }
+        line.innerHTML = score + " tasks"
+    }
     
 </script>
 
