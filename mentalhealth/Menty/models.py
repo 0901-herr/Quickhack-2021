@@ -14,28 +14,6 @@ class leaderboard(models.Model):
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # Models are used to create database
 # Each class represents one database
 
