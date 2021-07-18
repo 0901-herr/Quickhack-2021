@@ -15,7 +15,9 @@
         <div class="branding">
             <h1 id="title">Improve your mental health</h1>
             <h4 id="subtitle">by these small tasks</h4>
-            <button class="btn" type="button"><a href="#tasks">Start today</a></button>
+
+            <button class="btn" type="submit"><a href="#tasks">Start today</a></button>
+
             <img src="{% static 'css/pic1.png' %}">
         </div>
     </header>
@@ -28,10 +30,18 @@
             <div id="tasklist">
                 <li>
                     <div class="task-item">
+                        <h3>Be grateful for one thing happened today 🙏</h3>
+                        <p>Helping clearing out the chores</p>
+                    </div>
+                    <button class="task-btn" onclick="changeColor(this)"></button>
+                </li> 
+
+                <li>
+                    <div class="task-item">
                         <h3>Helping clearing out the chores</h3>
                         <p>Helping clearing out the chores</p>
                     </div>
-                    <button class="task-btn"></button>
+                    <button class="task-btn" onclick="changeColor(this)"></button>
                 </li>
 
                 <li>
@@ -39,15 +49,7 @@
                         <h3>Helping clearing out the chores</h3>
                         <p>Helping clearing out the chores</p>
                     </div>
-                    <button class="task-btn"></button>
-                </li>
-
-                <li>
-                    <div class="task-item">
-                        <h3>Helping clearing out the chores</h3>
-                        <p>Helping clearing out the chores</p>
-                    </div>
-                    <button class="task-btn"></button>
+                    <button class="task-btn" onclick="changeColor(this)"></button>
                 </li>
             </div>
         </div>
@@ -97,4 +99,15 @@
     </section>
 </body>
 </html>
+
+<script text="text/javascript">
+    document.getElementById('task-btn').onclick = changeColor;   
+
+    function changeColor(_this) {
+        _this.style.color = "blue";
+        _this.style.background
+        return false;
+    }   
+    
+</script>
 
