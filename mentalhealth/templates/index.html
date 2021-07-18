@@ -1,33 +1,37 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menty</title>
-    <link href="/Users/philippeyong/Desktop/quickhack/mentalhealth/templates/style.css" rel="stylesheets" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
     <header>
+        <div><img id="logo" src="{% static 'css/logo.png' %}"></div>
         <div class="branding">
             <h1 id="title">Improve your mental health</h1>
             <h4 id="subtitle">by these small tasks</h4>
-            <button class="btn" type="button">Start today</button>
+            <button class="btn" type="button"><a href="#tasks">Start today</a></button>
+            <img src="{% static 'css/pic1.png' %}">
         </div>
-        <img src="pic1.png">
     </header>
 
     <hr class="solid">
 
     <section id="main-content">
         <div id="tasks">
-            <h1>We set up some goals for you!</h1>
+            <h1>We've set up some goals for you today!</h1>
             <div id="tasklist">
                 <li>
                     <div class="task-item">
                         <h3>Helping clearing out the chores</h3>
                         <p>Helping clearing out the chores</p>
                     </div>
+                    <button class="task-btn"></button>
                 </li>
 
                 <li>
@@ -35,6 +39,7 @@
                         <h3>Helping clearing out the chores</h3>
                         <p>Helping clearing out the chores</p>
                     </div>
+                    <button class="task-btn"></button>
                 </li>
 
                 <li>
@@ -42,50 +47,54 @@
                         <h3>Helping clearing out the chores</h3>
                         <p>Helping clearing out the chores</p>
                     </div>
+                    <button class="task-btn"></button>
                 </li>
             </div>
         </div>
 
         <div id="leaderboard">
-            <h3>Leaderboard</h3>
+            <h3>Leaderboard 🔥🔥</h3>
             <ul>
                 <li>
                     <div class="leaderboard-item">
-                        <p>1. Robert</p>
-                        <p>5 tasks </p>
+                        <p class="name">1. Robert</p>
+                        <p class="record">5 tasks </p>
                     </div>
                 </li>
 
                 <li>
                     <div class="leaderboard-item">
-                        <p>2. William</p>
-                        <p>5 tasks </p>
+                        <p class="name">2. William</p>
+                        <p class="record">5 tasks </p>
                     </div>
                 </li>
 
                 <li>
                     <div class="leaderboard-item">
-                        <p>3. Joe</p>
-                        <p>3 tasks </p>
+                        <p class="name">3. Joe</p>
+                        <p class="record">3 tasks </p>
                     </div>
                 </li>
 
                 <li>
                     <div class="leaderboard-item">
-                        <p>4. Lim</p>
-                        <p>2 tasks </p>
+                        <p class="name">4. Lim</p>
+                        <p class="record">2 tasks </p>
                     </div>
                 </li>
 
                 <li>
                     <div class="leaderboard-item">
-                        <p>5. Ali</p>
-                        <p>1 tasks </p>
+                        <p class="name">5. Ali</p>
+                        <p class="record">1 tasks </p>
                     </div>
                 </li>
                
             </ul>
         </div>
+        <!-- <div id="credits">
+        <p>Menty v1.0</p> -->
     </section>
 </body>
 </html>
+
