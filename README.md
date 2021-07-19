@@ -27,4 +27,4 @@ Menty is an web application build to improve or maintain one’s mental health b
 - Whenever a user open the page and presses the start button, the page will scoll down and, showing two columns which are a list of tasks and a leaderboard. User can click on the corresponding button whenever they finish the positive act given, and the score will be added and updated. 
 
 ## Build with
-Django, Html, CSS, Javascript
+Django, HTML, CSS, Javascript
